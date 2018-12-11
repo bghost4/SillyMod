@@ -1,0 +1,3 @@
+author = bghost4
+version = 0.1
+displayName = SillyMod
