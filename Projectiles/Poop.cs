@@ -18,13 +18,18 @@ namespace SillyMod.Projectiles
             projectile.friendly = true;    
             projectile.melee = true;        
             projectile.tileCollide = true; 
-            projectile.penetrate = 30;    
+            projectile.penetrate = 2;    
             projectile.timeLeft = 200; 
             projectile.light = 0.75f;  
             projectile.extraUpdates = 1;
             projectile.ignoreWater = true; 
-            aiType = ProjectileID.Bullet;
+            aiType = -1;
         }
+
+		public override void AI() {
+			//should set the rotation of the projectile to the velocity vector 
+			projectile.rotation = projectile.velocity.ToRotation();
+		}
 
 
 public override bool OnTileCollide(Vector2 oldVelocity)

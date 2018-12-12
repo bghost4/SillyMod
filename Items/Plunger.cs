@@ -1,5 +1,9 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria;
+using System;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace SillyMod.Items
 {
@@ -16,8 +20,8 @@ namespace SillyMod.Items
 			item.melee = true;
 			item.width = 40;
 			item.height = 40;
-			item.useTime = 20;
-			item.useAnimation = 20;
+			item.useTime = 15;
+			item.useAnimation = 15;
 			item.useStyle = 3;
 			item.knockBack = 11;
 			item.value = 10000;
@@ -27,7 +31,7 @@ namespace SillyMod.Items
 			item.shoot = mod.ProjectileType("Poop");
 			item.shootSpeed = 4f; 
 		}
-
+		
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
